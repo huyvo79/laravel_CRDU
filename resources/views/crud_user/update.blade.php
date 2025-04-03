@@ -36,9 +36,16 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="phone" id="phone" class="form-control"
-                                           name="phone" required>
+                                           name="phone" required value="{{ $user->phone }}" >
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="address" id="address" class="form-control"
+                                           name="address" required value="{{ $user->address }}" >
+                                    @if ($errors->has('password'))
+                                        <span class="text-danger">{{ $errors->first('address') }}</span>
                                     @endif
                                 </div>
 

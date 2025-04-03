@@ -38,6 +38,13 @@
                                         <span class="text-danger">{{ $errors->first('phone') }}</span>
                                     @endif
                                 </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="adress" id="address" class="form-control"
+                                           name="address" required>
+                                           @if ($errors->has('address'))
+                                        <span class="text-danger">{{ $errors->first('address') }}</span>
+                                    @endif
+                                </div>
                                 <div class="d-grid mx-auto">
                                     <button type="submit" class="btn btn-dark btn-block">Submit</button>
                                 </div>
